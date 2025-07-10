@@ -11,7 +11,7 @@ function App() {
         </button>
         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul className="navbar-nav">
-            <li className="nav-item"><a className="nav-link poppins link-info" href="#about">About</a></li>
+            <li className="nav-item"><a className="nav-link poppins link-info" href="#about" onclick="scrollToSection('about'); return false;">About</a></li>
             <li className="nav-item"><a className="nav-link poppins link-info" href="#courses">Courses</a></li>
             <li className="nav-item"><a className="nav-link poppins link-info" href="#admission">Admission</a></li>
             <li className="nav-item"><a className="nav-link poppins link-info" href="#contact">Contact</a></li>

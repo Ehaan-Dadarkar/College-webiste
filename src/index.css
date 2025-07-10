@@ -6,6 +6,14 @@ body {
 }
 
 
+#about,
+#courses,
+#admission,
+#contact {
+    transition: all 10s ease-in-out;
+}
+
+
 .poppins {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
