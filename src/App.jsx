@@ -3,59 +3,111 @@ function App() {
 
   return (
     <>
-      <div className="min-vh-100 d-flex flex-column bg-light text-dark">
-        {/* Header */}
-        <header
-          className="bg-dark text-warning p-4 text-center h3 fw-bold shadow"
-          style={{ fontFamily: 'Notable, sans-serif' }}
-        >
-          AIARKP College of Engineering
-        </header>
+      {/* Navbar */}
+      <nav className="navbar navbar-expand-lg navbar-dark px-4 fixed-top">
+        <a className="navbar-brand notable fs-2" href="#">AIARKP</a>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul className="navbar-nav">
+            <li className="nav-item"><a className="nav-link poppins link-info" href="#about">About</a></li>
+            <li className="nav-item"><a className="nav-link poppins link-info" href="#courses">Courses</a></li>
+            <li className="nav-item"><a className="nav-link poppins link-info" href="#admission">Admission</a></li>
+            <li className="nav-item"><a className="nav-link poppins link-info" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
 
-        {/* Main Content */}
-        <main className="flex-fill p-4 container">
-          {/* About Section */}
-          <section className="bg-warning text-dark p-4 rounded mb-4">
-            <h2 className="h4 border-bottom pb-2 mb-3">About the College</h2>
-            <p>
-              AIARKP College of Engineering is a premier institution dedicated to
-              providing top-notch technical education and fostering innovation.
-              Our mission is to nurture skilled professionals and responsible citizens.
-            </p>
-          </section>
+      {/* Hero */}
+      <section className="hero section text-center pt-5 mt-5">
+        <dotlottie-wc
+          src="https://lottie.host/e2ea65ab-9df2-4c49-9495-ab6eb435e272/Bl33akyHDz.lottie"
+          style={{ width: 300, height: 300 }}
+          speed="1"
+          autoplay
+          loop
+          class="container"
+        />
+        <h1 className="notable hero-text">ABDUL RAZZAK KALSEKAR<br />POLYTECHNIC</h1>
+        <h1 className="notable hero-text mobile-hero d-none">ABDUL RAZZAK KALSEKAR POLYTECHNIC</h1>
+        <p className="poppins">Empowering Students for a Better Tomorrow</p>
+        <a href="#courses" className="btn btn-primary poppins">Explore Courses</a>
+      </section>
 
-          {/* Courses Section */}
-          <section className="bg-info text-dark p-4 rounded mb-4">
-            <h2 className="h4 border-bottom pb-2 mb-3">Courses Offered</h2>
-            <ul className="list-unstyled">
-              <li>• Diploma in Computer Engineering</li>
-              <li>• Diploma in Mechanical Engineering</li>
-              <li>• Diploma in Civil Engineering</li>
-              <li>• Diploma in Electrical Engineering</li>
-            </ul>
-          </section>
-
-          {/* Admission Section */}
-          <section className="bg-success text-white p-4 rounded mb-4">
-            <h2 className="h4 border-bottom pb-2 mb-3">Admission Process</h2>
-            <p>
-              Admissions are open for the academic year 2025-2026. Candidates can apply online
-              through our website or visit the campus. Eligibility is based on 10th or 12th-grade
-              scores, followed by counseling and document verification.
-            </p>
-          </section>
-        </main>
-
-        {/* Footer */}
-        <footer className="bg-dark text-warning text-center py-3 mt-auto">
-          <div>
-            <p>Contact Us: info@aiarkpcollege.edu.in | +91-9876543210</p>
-            <p>
-              Address: AIARKP College of Engineering, National Highway 66, Ratnagiri, Maharashtra - 415612
-            </p>
+      {/* About */}
+      <section id="about" className="about section">
+        <div className="container">
+          <h2 className="text-center mb-5 rubik">About</h2>
+          <div className="row align-items-center">
+            <div className="col-md-6 mb-4 mb-md-0">
+              <img src="/public/image (3).png" alt="College Building" className="img-fluid" />
+            </div>
+            <div className="col-md-6">
+              <p className="sans">Established in 2002–03, AIARKP is run by the well-regarded Anjuman-I-Islam Trust, which has been in the education field since 1874.</p>
+              <h5 className="mt-4 sans">Vision :</h5>
+              <p className="sans">To be the most sought after polytechnic that others would wish to emulate</p>
+            </div>
           </div>
-        </footer>
-      </div>
+        </div>
+      </section>
+
+      {/* Courses */}
+      <section id="courses" className="section">
+        <div className="container">
+          <h2 className="text-center mb-5 rubik">Courses</h2>
+          <div className="row g-4">
+            {[
+              { title: "Computer Engineering", icon: "/public/icons8-computer-50.png" },
+              { title: "Mechanical Engineering", icon: "/public/icons8-mechanical-engineering-32.png" },
+              { title: "Civil Engineering", icon: "/public/icons8-civil-engineer-50.png" },
+              { title: "Electrical Engineering", icon: "/public/icons8-voltmeter-50.png" }
+            ].map((course, index) => (
+              <div key={index} className="col-md-3 col-sm-6 card-section">
+                <div className="course-card text-center">
+                  <img src={course.icon} alt={course.title} className="course-icon " />
+                  <p className="sans">Diploma in {course.title}</p>
+                  <p className="sans">Duration: 3 Years</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Admission */}
+      <section id="admission" className="section">
+        <div className="container text-center">
+          <h2 className="mb-5 rubik">Admission</h2>
+          <div className="mx-auto" style={{ maxWidth: "400px" }}>
+            <div className="admission-step sans">1. Online Registration</div>
+            <div className="admission-step sans">2. Document Verification</div>
+            <div className="admission-step sans">3. Final Admission</div>
+            <button className="btn btn-warning mt-4">Apply Now</button>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="contact section">
+        <div className="container">
+          <h2 className="text-center mb-5 rubik">Contact Us</h2>
+          <div className="row justify-content-center">
+            <div className="col-12 d-flex align-items-center gap-3 m-2">
+              <img src="/public/icons8-address-24.png" alt="Address Icon" style={{ width: 30 }} />
+              <p className="sans mb-0">Jane Doe<br />1234 Elm Street, Apt 5A<br />Brooklyn, NY 11201, USA</p>
+            </div>
+            <div className="col-12 d-flex align-items-center gap-3 m-2">
+              <img src="/public/icons8-phone-30.png" alt="Phone Icon" style={{ width: 30 }} />
+              <a href="tel:+911234567890" className="text-white text-decoration-none link-info sans">+91 1234567890</a>
+            </div>
+            <div className="col-12 d-flex align-items-center gap-3 m-2">
+              <img src="/public/icons8-email-30.png" alt="Email Icon" style={{ width: 30 }} />
+              <a href="mailto:example@gmail.com" className="text-white text-decoration-none link-info sans">example@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   )
 }
