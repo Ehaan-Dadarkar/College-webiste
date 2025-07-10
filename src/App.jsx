@@ -41,7 +41,7 @@ function App() {
           <h2 className="text-center mb-5 rubik">About</h2>
           <div className="row align-items-center">
             <div className="col-md-6 mb-4 mb-md-0">
-              <img src="/public/image (3).png" alt="College Building" className="img-fluid" />
+              <img src="/image (3).png" alt="College Building" className="img-fluid" />
             </div>
             <div className="col-md-6">
               <p className="sans">Established in 2002–03, AIARKP is run by the well-regarded Anjuman-I-Islam Trust, which has been in the education field since 1874.</p>
@@ -58,10 +58,10 @@ function App() {
           <h2 className="text-center mb-5 rubik">Courses</h2>
           <div className="row g-4">
             {[
-              { title: "Computer Engineering", icon: "/public/icons8-computer-50.png" },
-              { title: "Mechanical Engineering", icon: "/public/icons8-mechanical-engineering-32.png" },
-              { title: "Civil Engineering", icon: "/public/icons8-civil-engineer-50.png" },
-              { title: "Electrical Engineering", icon: "/public/icons8-voltmeter-50.png" }
+              { title: "Computer Engineering", icon: "/icons8-computer-50.png" },
+              { title: "Mechanical Engineering", icon: "/icons8-mechanical-engineering-32.png" },
+              { title: "Civil Engineering", icon: "/icons8-civil-engineer-50.png" },
+              { title: "Electrical Engineering", icon: "/icons8-voltmeter-50.png" }
             ].map((course, index) => (
               <div key={index} className="col-md-3 col-sm-6 card-section">
                 <div className="course-card text-center">
@@ -94,15 +94,15 @@ function App() {
           <h2 className="text-center mb-5 rubik">Contact Us</h2>
           <div className="row justify-content-center">
             <div className="col-12 d-flex align-items-center gap-3 m-2">
-              <img src="/public/icons8-address-24.png" alt="Address Icon" style={{ width: 30 }} />
+              <img src="/icons8-address-24.png" alt="Address Icon" style={{ width: 30 }} />
               <p className="sans mb-0">Jane Doe<br />1234 Elm Street, Apt 5A<br />Brooklyn, NY 11201, USA</p>
             </div>
             <div className="col-12 d-flex align-items-center gap-3 m-2">
-              <img src="/public/icons8-phone-30.png" alt="Phone Icon" style={{ width: 30 }} />
+              <img src="/icons8-phone-30.png" alt="Phone Icon" style={{ width: 30 }} />
               <a href="tel:+911234567890" className="text-white text-decoration-none link-info sans">+91 1234567890</a>
             </div>
             <div className="col-12 d-flex align-items-center gap-3 m-2">
-              <img src="/public/icons8-email-30.png" alt="Email Icon" style={{ width: 30 }} />
+              <img src="/icons8-email-30.png" alt="Email Icon" style={{ width: 30 }} />
               <a href="mailto:example@gmail.com" className="text-white text-decoration-none link-info sans">example@gmail.com</a>
             </div>
           </div>
