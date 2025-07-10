@@ -41,7 +41,7 @@ function App() {
           <h2 className="text-center mb-5 rubik">About</h2>
           <div className="row align-items-center">
             <div className="col-md-6 mb-4 mb-md-0">
-              <img src="/image (3).png" alt="College Building" className="img-fluid" />
+              <img src="/kalsekar.jpg" alt="College Building" className="img-fluid" />
             </div>
             <div className="col-md-6">
               <p className="sans">Established in 2002–03, AIARKP is run by the well-regarded Anjuman-I-Islam Trust, which has been in the education field since 1874.</p>
